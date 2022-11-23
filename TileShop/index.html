@@ -100,7 +100,7 @@
              <ul class="dropdown-menu w-100">
               <li><a href=""class="dropdown-item">Bathroom</a></li>
               <li><a href=""class="dropdown-item">Kitchen</a></li>
-              <li><a href=""class="dropdown-item">Ourdoor</a></li>
+              <li><a href=""class="dropdown-item">Outdoor</a></li>
               <li><a href=""class="dropdown-item">Living Room</a></li>
               <li><a href=""class="dropdown-item">Bedroom</a></li>
               <li><a href=""class="dropdown-item">Commercial spaces tiles</a></li>
@@ -111,7 +111,7 @@
            <ul class="dropdown-menu w-100">
             <li><a href=""class="dropdown-item">Bathroom</a></li>
             <li><a href=""class="dropdown-item">Kitchen</a></li>
-            <li><a href=""class="dropdown-item">Ourdoor</a></li>
+            <li><a href=""class="dropdown-item">Outdoor</a></li>
             <li><a href=""class="dropdown-item">Living Room</a></li>
             <li><a href=""class="dropdown-item">Bedroom</a></li>
             <li><a href=""class="dropdown-item">Commercial spaces tiles</a></li>
@@ -127,7 +127,7 @@
             </ul>
         </li>
         <li class="nav-item col-2 btn btn-danger m-0 p-0">
-          <a href="" class="nav-link">Export Coner</a>
+          <a href="" class="nav-link">Export Conner</a>
         </li>
         <li class="nav-item  col-2 btn btn-danger m-0 p-0">
           <a href="" class="nav-link">Contact Us</a>
@@ -190,6 +190,25 @@
     <section >
         <div ng-view></div>
     </section>
+    <br>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="image/heading/bathroom_tiles.jpg" alt="bathroom">
+        <br>
+        <span class="d-flex justify-content-center">WALL TILES</span> 
+      </div>
+      <div class="col-sm-4">
+        <img src="image/heading/floor_tiles.jpg" alt="floor">
+        <br>
+        <span class="d-flex justify-content-center">FLOOR TILES</span> 
+      </div>
+      <div class="col-sm-4">
+        <img src="image/heading/special_tiles.jpg" alt="special">
+        <br>
+        <span class="d-flex justify-content-center">SPECIAL TILES</span> 
+      </div>
+    </div>
 
     <footer>
 
@@ -200,7 +219,7 @@
         var app = angular.module("myApp", ['ngRoute']);
         app.config(function($routeProvider) {
             $routeProvider
-            .when("/",{
+            .when("/wall",{
                 templateUrl:"section-wall.html"
             })
             .when("/floor",{
