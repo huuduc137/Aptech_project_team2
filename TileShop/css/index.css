@@ -1,0 +1,28 @@
+.bg-primary{
+    background-color: #DFF6FF !important;
+  }
+
+.nav-link{
+    color: brown;
+    font-weight: bold;
+  }
+/* .nav-tabs{
+  background-color: #00A1AB;
+} */
+
+.btn{
+  background-color:#00263B ;
+  color: azure;
+ }
+ h1{
+
+  font-size: small;
+ }
+ @media all {
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+   }
+div img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+   }
