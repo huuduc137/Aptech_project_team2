@@ -94,7 +94,7 @@
        <div class="collapse navbar-collapse col-10 p-0" id="main_nav">
        <ul class="navbar-nav row container-fluid justify-content-between m-auto p-0 btn-group">
          <li class="nav-item dropdown col-2 btn btn-danger m-0 p-0 ">
-            <a class="nav-link dropdown" href="#" >Wall Tiles
+            <a class="nav-link dropdown" href="#!wall" >Wall Tiles
               <!-- <i class="fa fa-cart-arrow-down"></i> -->
             </a>
              <ul class="dropdown-menu w-100">
@@ -107,7 +107,7 @@
              </ul>
          </li>
          <li class="nav-item  col-2 btn btn-danger m-0 p-0">
-          <a class="nav-link dropdown" href="#" >Floor Tiles</a>
+          <a class="nav-link dropdown" href="#!floor" >Floor Tiles</a>
            <ul class="dropdown-menu w-100">
             <li><a href=""class="dropdown-item">Bathroom</a></li>
             <li><a href=""class="dropdown-item">Kitchen</a></li>
@@ -118,7 +118,7 @@
            </ul>
        </li>
           <li class="nav-item dropdown col-2 btn btn-danger m-0 p-0">
-            <a class="nav-link dropdown" href="#" data-bs-toggle="dropdown">Special Tiles</a>
+            <a class="nav-link dropdown" href="#!special" data-bs-toggle="dropdown">Special Tiles</a>
             <ul class="dropdown-menu w-100">
               <li><a href=""class="dropdown-item">Gem Free</a></li>
               <li><a href=""class="dropdown-item">Tac</a></li>
@@ -127,7 +127,7 @@
             </ul>
         </li>
         <li class="nav-item col-2 btn btn-danger m-0 p-0">
-          <a href="" class="nav-link">Expert Corner</a>
+          <a href="#!expert" class="nav-link">Expert Corner</a>
           <ul class="dropdown-menu w-100">
             <li><a href=""class="dropdown-item">Blogs</a></li>
             <li><a href=""class="dropdown-item">Tiles Guide</a></li>
@@ -136,7 +136,7 @@
           </ul>
         </li>
         <li class="nav-item  col-2 btn btn-danger m-0 p-0">
-          <a href="" class="nav-link">Contact Us</a>
+          <a href="#!contact" class="nav-link">Contact Us</a>
         </li>
         <li class="nav-item  col-2 btn btn-danger m-0 p-0">
           <a class="nav-link dropdown" href="#" >
@@ -234,9 +234,12 @@
             .when("/special",{
                 templateUrl:"section-special.html"
             })
-            .when("/catalogue",{
-                templateUrl:"contact.html"
-            });
+            .when("/contact",{
+                templateUrl:"section-contactus.html"
+            })
+            .when("/expert",{
+                templateUrl:"section-expertcorner.html"
+            })
         });
         app.run(function($rootScope, $http){
             $http.get("js/image.json").then(function(rsp){
