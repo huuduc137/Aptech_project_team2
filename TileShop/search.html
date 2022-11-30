@@ -1,4 +1,106 @@
-<form action="">
+
+<div ng-controller = "searchControl"></div>
+  <form action="">
     <input class="m-auto" type="search" ng-model= "search"  placeholder="Search" aria-label="Search">
       <button  type="button" class=" ">Search</button>
-   </form>
+  </form>
+  <div class="row">
+    <div class="col-sm-3">
+      <section style="margin-top: 30px">
+        <div class="filterForm">
+          <h1 style="text-align:center">FILTER</h1>
+          <hr>
+          <div>
+            Application
+            <a class="btn" data-bs-toggle="collapse" href="#showHideApp" role="button">
+              +
+            </a>
+          </div>
+          <div id="showHideApp" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item">One</li>
+              <li class="list-group-item">Two</li>
+              <li class="list-group-item">Three</li>
+            </ul>
+            <div class="panel-footer">Footer</div>
+          </div>
+                        <div class="row cateFilterContent">
+                            <div class="col-sm-12">
+                                <input type="checkbox" id="NailPolishFilter" name="filter" class="cateFilter" value="Nail Polish">
+                                <label for="NailPolishFilter">Nail Polish</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="checkbox" id="AccessoryFilter" name="filter" class="cateFilter" value="Accessory"> 
+                                <label for="AccessoryFilter">Accessory</label>
+                            </div>
+                            <div class="col-sm-12">
+                              <input type="checkbox" id="ToolFilter" name="filter" class="cateFilter" value="Tool">
+                                <label for="ToolFilter">Tool</label>    
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <a class="titleFilter colorFilterBtn">
+                                    <i class="fa-solid fa-star" style="color: #572C71;"></i> Color
+                                    <span  class="showHideColorIcon">+</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row colorFilterContent">
+                            <div class="col-sm-12">
+                                <input type="checkbox" id="BlackFilter" name="filter" class="colorFilter" value="Black"> 
+                                <label for="BlackFilter">Black</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="checkbox" id="BlueFilter" name="filter" class="colorFilter" value="Blue">
+                                <label for="BlueFilter">Blue</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="checkbox" id="GreenFilter" name="filter" class="colorFilter" value="Green"> 
+                                <label for="GreenFilter">Green</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="checkbox" id="PurpleFilter" name="filter" class="colorFilter" value="Purple"> 
+                                <label for="PurpleFilter">Purple</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="checkbox" id="RedFilter" name="filter" class="colorFilter" value="Red">
+                                <label for="RedFilter">Red</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="checkbox" id="YellowFilter" name="filter" class="colorFilter" value="Yellow"> 
+                                <label for="YellowFilter">Yellow</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row" >
+                            <div class="col-sm-12">
+                                <div class="row" style="justify-content: center;">
+                                    <div class="col-3 col-lg-12 col-xl-6 "><button class="applyBtn">Apply</button></div>
+                                    <div class="col-3 col-lg-12 col-xl-6"><button type="reset" class="resetBtn">Reset</button></div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+            </section>
+      
+    </div>
+    <div class="col-sm-9">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        
+          <div class="card h-100" ng-repeat="f in list">
+              <img src="image/products/{{f.Name}}.jpg" class="card-img-top" alt="...">
+              <div class="card-body ">
+                <h5 class="card-title">{{f.Name.substring(4,f.Name.length)}} </h5>
+                <p class="card-text">{{f.Size}}</p>
+              </div>
+              <div class="card-footer ">
+                <small class="">Last updated 3 mins ago</small>
+              </div>
+            </div>
+    
+      </div>  
+    </div>
+  </div>
+</div>
