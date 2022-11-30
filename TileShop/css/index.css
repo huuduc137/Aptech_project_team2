@@ -3,20 +3,32 @@ body{
   padding: 5px;
 }
 
+
 .bg-primary{
     background-color: #DFF6FF !important;
+    
   }
+
+header div{
+  font-size: 70px;
+  font-family: Georgia;
+  color: rgb(204, 197, 197);
+  text-shadow: 2px 2px rgb(82, 78, 78);
+  padding-top: 50px;
+  padding-left: 10px;
+}
 
 .nav-link{
     color: black;
     font-weight: bold;
+    padding-top: 15px;
   }
 /* .nav-tabs{
   background-color: #00A1AB;
 } */
 
 .btn{
-  background-color:#FFE9AE ;
+  background-color: #D1D1D1 ;
   color: black;
  }
  h1{
@@ -24,7 +36,7 @@ body{
   font-size: small;
  }
  @media all {
-	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item:hover .dropdown-menu { display: block; }
    }
 div img{
     margin-top: 8px;
