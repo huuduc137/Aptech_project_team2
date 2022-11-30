@@ -17,76 +17,19 @@
     <header class="">
         <div class=" d-flex flex-row  bg-primary p-0 m-0">
             <div class="col-2 m-auto">
-              <!-- <img src="image/logo/logo Cera.png" href = "https://cera-worldoftiles.com/" alt="" class="d-block w-75 rounded-2  "> -->
               <a href="https://cera-worldoftiles.com/"><img src="image/logo/logo Cera.png" class="d-block w-75 rounded-2  "></a></p>
             </div>
             <div class="col-10 m-auto h1" >Tiles Of The Future World</div>
             </div>
     </header>
     <br>
-
-    <!-- <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav m-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarWalltiles" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Wall Tiles
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarWalltiles">
-              <a class="dropdown-item" href="#">Bathroom</a>
-              <a class="dropdown-item" href="#">Kitchen</a>
-              <a class="dropdown-item" href="#">Outdoor</a>
-              <a class="dropdown-item" href="#">Living Room</a>
-              <a class="dropdown-item" href="#">Bedroom</a>
-              <a class="dropdown-item" href="#">Commercial spaces tiles</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarFloortiles" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Floor Tiles
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarFloortiles">
-              <a class="dropdown-item" href="#">Bathroom</a>
-              <a class="dropdown-item" href="#">Kitchen</a>
-              <a class="dropdown-item" href="#">Outdoor</a>
-              <a class="dropdown-item" href="#">Living Room</a>
-              <a class="dropdown-item" href="#">Bedroom</a>
-              <a class="dropdown-item" href="#">Commercial spaces tiles</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarSpecialtiles" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Special Tiles
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarSpecialtiles">
-              <a class="dropdown-item" href="#">Gem free</a>
-              <a class="dropdown-item" href="#">Tac</a>
-              <a class="dropdown-item" href="#">Anti Static</a>
-              <a class="dropdown-item" href="#">Cool Roof</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Export Conner</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-        </ul>
-        
-      </div>
-     
-    </nav> -->
     <nav class="navbar navbar-expand-md   sticky-top m-auto p-0">
       <!-- <a class="navbar-brand" href="#"></a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="container-fluid m-auto p-0 row">
-       <div class="collapse navbar-collapse col-10 p-0" id="main_nav">
+       <div class="collapse navbar-collapse col-10 p-0" id="navbarNavDropdown">
        <ul class="navbar-nav row container-fluid justify-content-between m-auto p-0 btn-group">
          <li class="nav-item dropdown col-2 btn btn-danger m-0 p-0 ">
             <a class="nav-link dropdown" href="#!wall" >Wall Tiles
@@ -112,7 +55,7 @@
            </ul>
        </li>
           <li class="nav-item dropdown col-2 btn btn-danger m-0 p-0">
-            <a class="nav-link dropdown" href="#!special" data-bs-toggle="dropdown">Special Tiles</a>
+            <a class="nav-link dropdown" href="#!special">Special Tiles</a>
             <ul class="dropdown-menu w-100">
               <li><a href=""class="dropdown-item">Gem Free</a></li>
               <li><a href=""class="dropdown-item">Tac</a></li>
@@ -145,13 +88,14 @@
       </div> <!-- container-fluid.// -->
      </nav>
      <form action="">
-      <input class="m-auto" type="search" placeholder="Search" aria-label="Search">
+      <input class="m-auto" type="search" ng-model= "search"  placeholder="Search" aria-label="Search">
         <button  type="button" class=" ">Search</button>
      </form>
     <section >
       <div ng-view></div>
     </section>
-    
+    <br>
+    <br>
 
     <footer class="text-center text-lg-start bg-white text-muted">
       <!-- Section: Social media -->

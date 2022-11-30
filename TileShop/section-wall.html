@@ -1,7 +1,7 @@
 <div ng-controller = "section-floor">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
       
-        <div class="card h-100" ng-repeat="f in list| filter:'1.'">
+        <div class="card h-100" ng-repeat="f in list| filter:'1.' | filter: search">
             <img src="image/products/{{f.Name}}.jpg" class="card-img-top" alt="...">
             <div class="card-body ">
               <h5 class="card-title">{{f.Name.substring(4,f.Name.length)}} </h5>
