@@ -46,6 +46,10 @@ div img{
     width: 100%;
    }
 
+.letbuild{
+  font-family: 'Brush Script MT';
+  font-size: 25px;
+}
    footer{
     margin-top: 15px;
     margin-bottom: 15px;
