@@ -9,13 +9,13 @@ body{
     
   }
 
-header div{
-  font-size: 70px;
-  font-family: Georgia;
+header {
+  font-size: 100px;
+  font-family: 'Brush Script MT';
   color: rgb(204, 197, 197);
   text-shadow: 2px 2px rgb(82, 78, 78);
-  padding-top: 50px;
-  padding-left: 10px;
+  padding-top: auto;
+  
 }
 
 .nav-link{
@@ -30,6 +30,7 @@ header div{
 .btn{
   background-color: #D1D1D1 ;
   color: black;
+  
  }
  h1{
 
@@ -38,8 +39,9 @@ header div{
  @media all {
 	.navbar .nav-item:hover .dropdown-menu { display: block; }
    }
+
 div img{
-    margin-top: 8px;
+    margin-top: 10px;
     vertical-align: middle;
     width: 100%;
    }
