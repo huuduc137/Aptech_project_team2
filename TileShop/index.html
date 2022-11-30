@@ -77,7 +77,7 @@
         </li>
         <li class="nav-item  col-2 btn btn-danger m-0 p-0">
           <a class="nav-link dropdown" href="#" >
-            <div class="btn"><i class="fa-solid fa-magnifying-glass "></i></div>
+            <a class="btn"  href="#!search"><i class="fa-solid fa-magnifying-glass "></i></a>
             <div class="btn"><i class="fa-regular fa-user"></i></div>
           </a>
         </li>
@@ -87,10 +87,7 @@
        </div> <!-- navbar-collapse.// -->
       </div> <!-- container-fluid.// -->
      </nav>
-     <form action="">
-      <input class="m-auto" type="search" ng-model= "search"  placeholder="Search" aria-label="Search">
-        <button  type="button" class=" ">Search</button>
-     </form>
+
     <section >
       <div ng-view></div>
     </section>
@@ -237,6 +234,9 @@
             })
             .when("/expert",{
                 templateUrl:"section-expertcorner.html"
+            })
+            .when("/search",{
+                templateUrl:"search.html"
             })
         });
         app.run(function($rootScope, $http){
