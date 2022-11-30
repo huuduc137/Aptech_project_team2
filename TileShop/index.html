@@ -16,7 +16,10 @@
     <!-- banner  -->
     <header class="">
         <div class=" d-flex flex-row  bg-primary p-0 m-0">
-            <div class="col-2 m-auto"><img src="image/logo/logo Cera.png" alt="" class="d-block w-75 rounded-2  "></div>
+            <div class="col-2 m-auto">
+              <!-- <img src="image/logo/logo Cera.png" href = "https://cera-worldoftiles.com/" alt="" class="d-block w-75 rounded-2  "> -->
+              <a href="https://cera-worldoftiles.com/"><img src="image/logo/logo Cera.png" class="d-block w-75 rounded-2  "></a></p>
+            </div>
             <div class="col-10 m-auto h1" >Tiles Of The Future World</div>
             </div>
     </header>
@@ -149,7 +152,7 @@
       <div ng-view></div>
     </section>
 
-
+<!-- 
     <div id="QC" class="carousel carousel-dark slide w-100" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#QC" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -208,11 +211,126 @@
         <br>
         <span class="d-flex justify-content-center">SPECIAL TILES</span> 
       </div>
-    </div>
+    </div> -->
 
-    <footer>
 
+    <footer class="text-center text-lg-start bg-white text-muted">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Let build the world</span>
+        </div>
+        <!-- Left -->
+    
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+    
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3 text-secondary"></i>Cera - Tiles of World
+              </h6>
+              <p>
+                Tiles opened its first store in 1963 in Sale, Manchester and then continued to open stores across the North West and the Midlands. In 1990, Cera-Tiles of World merged with Tile Kingdom and consequently expanded its presence into the South and London. Cera-Tiles of World continued to grow following the merger and became a public limited company (PLC) in 1997.
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                Products
+              </h6>
+              <p>
+                <a href="#!wall" class="text-reset">Wall Tiles</a>
+              </p>
+              <p>
+                <a href="#!floor" class="text-reset">Floor Tiles</a>
+              </p>
+              <p>
+                <a href="#!special" class="text-reset">Special Tiles</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                About Us
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">The Company</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Board of Directors</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Media Center</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Sustainability</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3 text-secondary"></i> Ho Chi Minh, 312 Nam Ky Khoi Nghia, Viet Nam</p>
+              <p>
+                <i class="fas fa-envelope me-3 text-secondary"></i>
+                cera-tilesofworld@tilesvietnam.com
+              </p>
+              <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://cera-worldoftiles.com/">Cera-Tiles of World</a>
+      </div>
+      <!-- Copyright -->
     </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
     <script>
@@ -220,6 +338,7 @@
         app.config(function($routeProvider) {
             $routeProvider
             .when("/",{
+              templateUrl:"home.html"
             })
             .when("/wall",{
                 templateUrl:"section-wall.html"
