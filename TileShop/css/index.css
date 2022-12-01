@@ -1,6 +1,12 @@
 
-body{
-  padding: 5px;
+.searchpage{
+  padding-left: 16%;
+  padding-right: 14%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.card h-100{
+  padding: 10px;
 }
 
 
@@ -59,4 +65,8 @@ div img{
    footer{
     margin-top: 15px;
     margin-bottom: 15px;
+   }
+
+   .filterForm{
+    position:sticky top;
    }
