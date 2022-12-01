@@ -121,3 +121,6 @@ div img{
    .card:active {
     --border-width: 5px;
    }
+   .row{
+    justify-content: space-around;
+   }
