@@ -1,13 +1,17 @@
-<div ng-controller = "section-floor">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        <div class="card " ng-repeat="f in list| filter:'2.' | filter: search">
-            <img class="d-flex w-100" src="image/products/{{f.Name}}.jpg" class="card-img-top" alt="...">
+<div ng-controller = "section-floor" class="container px-4">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3  ">
+        <div class="card m-1 " ng-repeat="f in list| filter:'2.' | filter: search">
+            <img class="container w-100" src="image/products/{{f.Name}}.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{f.Name.substring(4,f.Name.length)}} </h5>
               <p class="card-text">{{f.Size}}</p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">Last updated 3 mins ago</small>
+              <small class="text-muted">
+                <button class="btn-small" ><a href="">Download</a> </button>
+                <button class="btn-small"> Compare</button>
+                <button class="btn-small" value="{{f.Name}}"> Future</button>
+          </small>
             </div>
           </div>
 
