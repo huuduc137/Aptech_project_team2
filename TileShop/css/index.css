@@ -12,14 +12,14 @@ body{
 header {
   font-size: 100px;
   font-family: 'Brush Script MT';
-  color: rgb(204, 197, 197);
-  text-shadow: 2px 2px rgb(82, 78, 78);
+  color: rgb(240, 125, 221);
+  text-shadow: 2px 2px rgb(247, 34, 229);
   padding-top: auto;
   
 }
 
 .nav-link{
-    color: black;
+    color: rgb(240, 11, 209);
     font-weight: bold;
     padding-top: 15px;
   }
@@ -28,8 +28,8 @@ header {
 } */
 
 .btn{
-  background-color: #D1D1D1 ;
-  color: black;
+  background-color: #f0cee2 ;
+  color: rgb(245, 35, 210);
   
  }
  h1{
@@ -39,6 +39,11 @@ header {
  @media all {
 	.navbar .nav-item:hover .dropdown-menu { display: block; }
    }
+
+.dropdown-item {
+  background-color: #f0cee2 ;
+  color: rgb(245, 35, 210);
+}
 
 div img{
     margin-top: 10px;
