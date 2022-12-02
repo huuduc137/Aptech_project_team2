@@ -254,7 +254,14 @@
    
         })
         app.controller("searchControl",function($scope){
-   
+          $scope.tbSize = [];
+          angular.forEach($scope.list, function(value, key) {
+            var exists = false;
+            angular.forEach($scope.tbSize, function(value2, key2) {
+              if(angular.equals(value.Size, value2)){ exists = true }; 
+            });
+            if(exists == false && value.Size != "") { $scope.tbSize.push(value.Size); }
+          });
         })
     </script>
 </body>
