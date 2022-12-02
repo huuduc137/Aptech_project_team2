@@ -70,3 +70,12 @@ div img{
    .filterForm{
     position:sticky top;
    }
+
+   .search_box{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+   }
+   h1{
+    font-size: 1rem !important;;
+   }

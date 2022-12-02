@@ -263,10 +263,6 @@
           $scope.tbApplication = [];
           $scope.filterList = {};
 
-          $scope.checkAppli = [];
-          $scope.checkFinish = [];
-
-
           angular.forEach($scope.list, function(value, key) {
             var exists = false;
             angular.forEach($scope.tbSize, function(value2, key2) {
@@ -291,29 +287,29 @@
               if(angular.equals(value.Application, value2)){ exists = true }; 
             });
             if(exists == false && value.Application != "") { $scope.tbApplication.push(value.Application);}
-
-
           });
+
+          
           $scope.filter = {};
           $scope.filterByPropertiesMatchingAND = function (list) {
-          var matchesAND = true;
-          for (var obj in $scope.filter) {
-            if( $scope.filter.hasOwnProperty(obj) ) {
-              if (noSubFilter($scope.filter[obj])) continue;
-              if (!$scope.filter[obj][list[obj]]) {
-                matchesAND = false;
-                break;
+            var matchesAND = true;
+            for (var obj in $scope.filter) {
+              if( $scope.filter.hasOwnProperty(obj) ) {
+                if (noSubFilter($scope.filter[obj])) continue;
+                if (!$scope.filter[obj][list[obj]]) {
+                  matchesAND = false;
+                  break;
+                }
               }
             }
+            return matchesAND;
+          };
+          function noSubFilter(obj) {
+            for (var key in obj) {
+              if (obj[key]) return false;
+            }
+            return true;
           }
-          return matchesAND;
-        };
-        function noSubFilter(obj) {
-          for (var key in obj) {
-            if (obj[key]) return false;
-          }
-          return true;
-        }
 
 
         })
