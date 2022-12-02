@@ -258,6 +258,11 @@
           $scope.tbFinish = [];
           $scope.tbDesign = [];
           $scope.tbApplication = [];
+          $scope.filterList = {};
+
+          $scope.checkAppli = [];
+          $scope.checkFinish = [];
+
 
           angular.forEach($scope.list, function(value, key) {
             var exists = false;
@@ -286,6 +291,11 @@
 
 
           });
+
+          $scope.ApplyFilter = function(){
+            
+          }
+
           
 
 

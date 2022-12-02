@@ -23,7 +23,7 @@
               <div id="showHideApp" class="panel-collapse collapse">
                 <ul class="list-group">
                   <div ng-repeat = "appli in tbApplication | orderBy">
-                    <input type="checkbox" ng-model="checkAppli[appli]"> {{appli}}
+                    <input type="checkbox" ng-model="checkAppli[$index]"> {{appli}}
                   </div>
                 </ul>
               </div>
@@ -41,7 +41,7 @@
               <div id="showHideFinish" class="panel-collapse collapse">
                 <ul class="list-group">
                   <div ng-repeat = "finish in tbFinish | orderBy">
-                    <input type="checkbox" ng-model="checkFinish[finish]"> {{finish}}
+                    <input type="checkbox" ng-model="checkFinish[$index]"> {{finish}}
                   </div>
                 </ul>
               </div>
@@ -59,7 +59,7 @@
               <div id="showHideDesign" class="panel-collapse collapse">
                 <ul class="list-group">
                   <div ng-repeat = "design in tbDesign | orderBy">
-                    <input type="checkbox" ng-model="checkDesign[design]"> {{design}}
+                    <input type="checkbox" ng-model="checkDesign[$index]"> {{design}}
                   </div>
                 </ul>
               </div>
@@ -77,10 +77,22 @@
               <div id="showHideSize" class="panel-collapse collapse">
                 <ul class="list-group">
                   <div ng-repeat = "size in tbSize | orderBy">
-                    <input type="checkbox" ng-model="checkSize[size]"> {{size}}
+                    <input type="checkbox" ng-model="checkSize[$index]"> {{size}}
                   </div>
                 </ul>
               </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-8">
+                  <a class="btn" ng-click="ApplyFilter()">Apply</a>
+                </div>
+                <div class="col-sm-4">
+                  <a class="btn" ng-click="ClearFilter()">Reset</a>
+                </div>
+              </div>
+
+
+
 
               </div>
                 </section>
@@ -88,8 +100,7 @@
         </div>
         <div class="col-sm-9">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-            
-              <div class="card h-100" ng-repeat="f in list | filter:checkAppli| filter: searchText">
+              <div class="card h-100" ng-repeat="f in list | filter: searchText">
                   <img src="image/products/{{f.Id.slice(0,4)}}{{f.Name}}.jpg" class="card-img-top" alt="...">
                   <div class="card-body ">
                     <h5 class="card-title">{{f.Name}} </h5>
