@@ -2,7 +2,7 @@
 <div class="searchpage">
     <div ng-controller = "searchControl">
       <form action="">
-        <input class="m-auto" type="search" ng-model= "search"  placeholder="Search" aria-label="Search">
+        <input class="m-auto" type="search" ng-model= "searchText"  placeholder="Search" aria-label="Search">
           <button  type="button" class=" ">Search</button>
       </form>
       <div class="row">
@@ -22,14 +22,8 @@
               </div>
               <div id="showHideApp" class="panel-collapse collapse">
                 <ul class="list-group">
-                  <div>
-                    <input type="checkbox" ng-model="application.wallTiles" ng-true-value="2." ng-false-value=""> Wall Tiles
-                  </div>
-                  <div>
-                    <input type="checkbox" ng-model="application.floorTiles"> Floor Tiles
-                  </div>
-                  <div>
-                    <input type="checkbox" ng-model="application.special"> Special Tiles
+                  <div ng-repeat = "appli in tbApplication | orderBy">
+                    <input type="checkbox" ng-model="checkAppli[appli]"> {{appli}}
                   </div>
                 </ul>
               </div>
@@ -46,17 +40,8 @@
               </div>
               <div id="showHideFinish" class="panel-collapse collapse">
                 <ul class="list-group">
-                  <div>
-                    <input type="checkbox" ng-model="finish.glossy"> Gloss
-                  </div>
-                  <div>
-                    <input type="checkbox" ng-model="finish.polish"> Polish
-                  </div>
-                  <div>
-                    <input type="checkbox" ng-model="finish.matt"> Matt
-                  </div>
-                  <div>
-                    <input type="checkbox" ng-model="finish.satin"> Satin
+                  <div ng-repeat = "finish in tbFinish | orderBy">
+                    <input type="checkbox" ng-model="checkFinish[finish]"> {{finish}}
                   </div>
                 </ul>
               </div>
@@ -73,11 +58,8 @@
               </div>
               <div id="showHideDesign" class="panel-collapse collapse">
                 <ul class="list-group">
-                  <div>
-                    <input type="checkbox" ng-model="application.single"> Single
-                  </div>
-                  <div>
-                    <input type="checkbox" ng-model="application.random"> Random
+                  <div ng-repeat = "design in tbDesign | orderBy">
+                    <input type="checkbox" ng-model="checkDesign[design]"> {{design}}
                   </div>
                 </ul>
               </div>
@@ -99,6 +81,7 @@
                   </div>
                 </ul>
               </div>
+
               </div>
                 </section>
           
@@ -106,7 +89,7 @@
         <div class="col-sm-9">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             
-              <div class="card h-100" ng-repeat="f in list | filter:application">
+              <div class="card h-100" ng-repeat="f in list | filter:checkAppli| filter: searchText">
                   <img src="image/products/{{f.Id.slice(0,4)}}{{f.Name}}.jpg" class="card-img-top" alt="...">
                   <div class="card-body ">
                     <h5 class="card-title">{{f.Name}} </h5>

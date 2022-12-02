@@ -255,13 +255,40 @@
         })
         app.controller("searchControl",function($scope){
           $scope.tbSize = [];
+          $scope.tbFinish = [];
+          $scope.tbDesign = [];
+          $scope.tbApplication = [];
+
           angular.forEach($scope.list, function(value, key) {
             var exists = false;
             angular.forEach($scope.tbSize, function(value2, key2) {
               if(angular.equals(value.Size, value2)){ exists = true }; 
             });
-            if(exists == false && value.Size != "") { $scope.tbSize.push(value.Size); }
+            if(exists == false && value.Size != "") { $scope.tbSize.push(value.Size);}
+
+            exists = false;
+            angular.forEach($scope.tbFinish, function(value2, key2) {
+              if(angular.equals(value.Finish, value2)){ exists = true }; 
+            });
+            if(exists == false && value.Finish != "") { $scope.tbFinish.push(value.Finish);}
+
+            exists = false;
+            angular.forEach($scope.tbDesign, function(value2, key2) {
+              if(angular.equals(value.Design, value2)){ exists = true }; 
+            });
+            if(exists == false && value.Design != "") { $scope.tbDesign.push(value.Design);}
+
+            exists = false;
+            angular.forEach($scope.tbApplication, function(value2, key2) {
+              if(angular.equals(value.Application, value2)){ exists = true }; 
+            });
+            if(exists == false && value.Application != "") { $scope.tbApplication.push(value.Application);}
+
+
           });
+          
+
+
         })
     </script>
 </body>
