@@ -294,10 +294,27 @@
 
 
           });
-
-          $scope.ApplyFilter = function(){
-            
+          $scope.filter = {};
+          $scope.filterByPropertiesMatchingAND = function (list) {
+          var matchesAND = true;
+          for (var obj in $scope.filter) {
+            if( $scope.filter.hasOwnProperty(obj) ) {
+              if (noSubFilter($scope.filter[obj])) continue;
+              if (!$scope.filter[obj][list[obj]]) {
+                matchesAND = false;
+                break;
+              }
+            }
           }
+          return matchesAND;
+        };
+        function noSubFilter(obj) {
+          for (var key in obj) {
+            if (obj[key]) return false;
+          }
+          return true;
+        }
+
 
         })
     </script>
