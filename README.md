@@ -1,1 +1,1 @@
-https://github.com/huuduc137/Aptech_project_team2
+https://huuduc137.github.io/Aptech_project_team2/
