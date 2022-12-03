@@ -103,7 +103,7 @@
       <div class="col-sm-9">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
             <div class="card h-100" ng-repeat="f in filtered = (list|filter:filterByPropertiesMatchingAND | filter: searchText)">
-                <img src="image/products/{{f.Id.slice(0,4)}}{{f.Name}}.jpg" class="card-img-top" alt="...">
+              <a href="#!/details/{{f.Id}}"> <img src="image/products/{{f.Id.slice(0,4)}}{{f.Name}}.jpg" class="card-img-top" alt="..."></a>
                 <div class="card-body ">
                   <h5 class="card-title">{{f.Name}} </h5>
                   <p class="card-text">{{f.Size}}</p>
