@@ -238,6 +238,10 @@
             .when("/search",{
                 templateUrl:"search.html"
             })
+            .when("/details/:id",{
+                templateUrl:"product-details.html",
+                controller: "productDetailsController"
+            })
         });
         app.run(function($rootScope, $http){
             $http.get("js/image.json").then(function(rsp){
@@ -254,6 +258,10 @@
         app.controller("section-contact",function($scope){
    
           
+        })
+        
+        app.controller("productDetailsController",function($scope, $routeParams){
+          $scope.product_id = $routeParams.id;
         })
 
         app.controller("searchControl",function($scope){
@@ -310,6 +318,8 @@
             }
             return true;
           }
+
+
 
 
         })
