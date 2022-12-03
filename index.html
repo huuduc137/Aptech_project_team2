@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/index.css">
 <!-- Latest compiled JavaScript -->
 </head>
-<body ng-app="myApp" class="">
+<body ng-app="myApp" class="" ng-controller="myController">
     <!-- banner  -->
     <header class="">
         <div class=" d-flex flex-row  p-0 m-0">
@@ -243,6 +243,10 @@
                 templateUrl:"product-details.html",
                 controller: "productDetailsController"
             })
+            .when("/wall/:cat",{
+                templateUrl:"cat-wall.html",
+                controller: "cat-wallController"
+            })
         });
         app.run(function($rootScope, $http){
             $http.get("js/image.json").then(function(rsp){
@@ -251,6 +255,9 @@
              })
          })//su dung root scope
         app.controller("section-wall",function($scope){
+
+        })
+        app.controller("myController",function($scope){
 
         })
         app.controller("section-floor",function($scope){
@@ -270,8 +277,8 @@
           $scope.tbFinish = [];
           $scope.tbDesign = [];
           $scope.tbApplication = [];
+          $scope.tbCatgo = [];
           $scope.filterList = {};
-
           angular.forEach($scope.list, function(value, key) {
             var exists = false;
             angular.forEach($scope.tbSize, function(value2, key2) {
@@ -296,6 +303,12 @@
               if(angular.equals(value.Application, value2)){ exists = true }; 
             });
             if(exists == false && value.Application != "") { $scope.tbApplication.push(value.Application);}
+
+            exists = false;
+            angular.forEach($scope.tbCatgo, function(value2, key2) {
+              if(angular.equals(value.Catgo, value2)){ exists = true }; 
+            });
+            if(exists == false && value.Catgo != "") { $scope.tbCatgo.push(value.Catgo);}
           });
 
           

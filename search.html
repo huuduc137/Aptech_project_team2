@@ -90,6 +90,26 @@
                 </div>
               </div>
               <hr>
+              <div ng-init="filter['Catgo']={}">
+                <div class="row">
+                  <div class="col-sm-9">
+                    Categories
+                  </div>
+                  <div class="col-sm-3">
+                    <a class="btn" data-bs-toggle="collapse" href="#showHideCat" role="button">
+                      +
+                    </a>
+                </div>
+                </div>
+                <div id="showHideCat" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <div ng-repeat = "cat in tbCatgo">
+                      <input type="checkbox" ng-model="filter['Catgo'][cat]" ng-model="cat"> {{cat}}
+                    </div>
+                  </ul>
+                </div>
+              </div>
+              <hr>
               </div>
                 </section>
           
