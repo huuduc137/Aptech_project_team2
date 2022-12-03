@@ -35,33 +35,33 @@
          <li class="nav-item dropdown col-2 btn btn-lg m-0 p-0 ">
             <a class="nav-link dropdown" href="#!wall" >Wall Tiles
             </a>
-             <ul class="dropdown-menu w-100">
-              <li><a href=""class="dropdown-item">Bathroom</a></li>
-              <li><a href=""class="dropdown-item">Kitchen</a></li>
-              <li><a href=""class="dropdown-item">Outdoor</a></li>
-              <li><a href=""class="dropdown-item">Living Room</a></li>
-              <li><a href=""class="dropdown-item">Bedroom</a></li>
-              <li><a href=""class="dropdown-item">Commercial Spaces Tiles</a></li>
+             <ul class="dropdown-menu w-100" >
+              <li><a href="#!/wall/Bathroom"class="dropdown-item">Bathroom</a></li>
+              <li><a href="#!/wall/Kitchen"class="dropdown-item">Kitchen</a></li>
+              <li><a href="#!/wall/Outdoor"class="dropdown-item">Outdoor</a></li>
+              <li><a href="#!/wall/Living Room"class="dropdown-item">Living Room</a></li>
+              <li><a href="#!/wall/Bedroom"class="dropdown-item">Bedroom</a></li>
+              <li><a href="#!/wall/Commercial Spaces"class="dropdown-item">Commercial Spaces Tiles</a></li>
              </ul>
          </li>
          <li class="nav-item  dropdown col-2 btn btn-lg m-0 p-0">
           <a class="nav-link dropdown" href="#!floor" >Floor Tiles</a>
            <ul class="dropdown-menu w-100">
-            <li><a href=""class="dropdown-item">Bathroom</a></li>
-            <li><a href=""class="dropdown-item">Kitchen</a></li>
-            <li><a href=""class="dropdown-item">Outdoor</a></li>
-            <li><a href=""class="dropdown-item">Living Room</a></li>
-            <li><a href=""class="dropdown-item">Bedroom</a></li>
-            <li><a href=""class="dropdown-item">Commercial Spaces Tiles</a></li>
+            <li><a href="#!/floor/Bathroom"class="dropdown-item">Bathroom</a></li>
+            <li><a href="#!/floor/Kitchen"class="dropdown-item">Kitchen</a></li>
+            <li><a href="#!/floor/Outdoor"class="dropdown-item">Outdoor</a></li>
+            <li><a href="#!/floor/Living Room"class="dropdown-item">Living Room</a></li>
+            <li><a href="#!/floor/Bedroom"class="dropdown-item">Bedroom</a></li>
+            <li><a href="#!/floor/Commercial Spaces"class="dropdown-item">Commercial Spaces Tiles</a></li>
            </ul>
        </li>
           <li class="nav-item dropdown col-2 btn btn-lg m-0 p-0">
             <a class="nav-link dropdown" href="#!special">Special Tiles</a>
             <ul class="dropdown-menu w-100">
-              <li><a href=""class="dropdown-item">Gem Free</a></li>
-              <li><a href=""class="dropdown-item">Tac</a></li>
-              <li><a href=""class="dropdown-item">Anti Static</a></li>
-              <li><a href=""class="dropdown-item">Cool Roof</a></li>
+              <li><a href="#!/special/Gem Free"class="dropdown-item">Gem Free</a></li>
+              <li><a href="#!/special/Tac"class="dropdown-item">Tac</a></li>
+              <li><a href="#!/special/Anti Static"class="dropdown-item">Anti Static</a></li>
+              <li><a href="#!/special/Cool Roof"class="dropdown-item">Cool Roof</a></li>
             </ul>
         </li>
         <li class="nav-item col-2 btn btn-lg m-0 p-0">
@@ -243,9 +243,17 @@
                 templateUrl:"product-details.html",
                 controller: "productDetailsController"
             })
-            .when("/wall/:cat",{
-                templateUrl:"cat-wall.html",
-                controller: "cat-wallController"
+            .when("/wall/:type",{
+                templateUrl:"walltiles/walltiles.html",
+                controller: "myController"
+            })
+            .when("/floor/:type",{
+                templateUrl:"floortiles/floortiles.html",
+                controller: "myController"
+            })
+            .when("/special/:type",{
+                templateUrl:"specialtiles/specialtiles.html",
+                controller: "myController"
             })
         });
         app.run(function($rootScope, $http){
@@ -257,7 +265,8 @@
         app.controller("section-wall",function($scope){
 
         })
-        app.controller("myController",function($scope){
+        app.controller("myController",function($scope, $routeParams){
+          $scope.typeFilter = $routeParams.type;
 
         })
         app.controller("section-floor",function($scope){

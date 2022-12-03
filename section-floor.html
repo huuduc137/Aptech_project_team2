@@ -1,22 +1,125 @@
-<div class="searchpage">
-<div ng-controller = "section-floor">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-        <div class="card h-100" ng-repeat="f in list| filter:{Application:'Floor'} | filter: search">
-          <img src="image/products/{{f.Id.slice(0,4)}}{{f.Name}}.jpg" class="card-img-top" alt="...">
-          <div class="card-body ">
-            <h5 class="card-title">{{f.Name}} </h5>
-            <p class="card-text">{{f.Size}}</p>
-            <p class="card-text">$ {{f.Price}} /&#13217</p>
-          </div>
-            <div class="card-footer">
-              <small class="text-muted">
-                <button class="btn-card">Compare</button>
-                <button class="btn-card">Feature</button>
-                <button class="btn-card">Download</button>
-              </small>
-            </div>
-          </div>
 
-    </div>  
-</div>
+<div class="searchpage">
+  <div ng-controller = "searchControl">
+
+    <div class="search_box">
+      <h1>FLOOR TILES</h1>
+      Wall tiles look stunning in every room in the house - from the bathroom to the kitchen. Whether you’re planning on making a statement or want something more muted, our extensive range of decorative wall tiles will add character and a splash of colour wherever you place them. Opt for an eye-catching pattern or keep it neutral with contemporary muted tones. All our wall tiles are available to order online.
+    </div>
+    <div class="search_box">
+      <input class="m-auto" type="search" ng-model= "searchText"  placeholder="Search" aria-label="Search" >
+        <button  type="button" class=" ">Search</button>
+      </div>
+    <hr>
+    <div class="row">
+      <div class="col-sm-3">
+        <section style="margin-top: 30px" class="sticky-top">
+          <div class="filterForm">
+            <h1 style="text-align:center">FILTER</h1>
+            <hr>
+            <div ng-init="filter['Application']={'Floor Tiles ':true}">
+              <div class="row">
+                <div class="col-sm-9" >
+                  Application
+                </div>
+                <div class="col-sm-3">
+                  <a class="btn" data-bs-toggle="collapse" href="#showHideApp" role="button"> +
+                  </a>
+                </div>
+              </div>
+              <div id="showHideApp" class="panel-collapse collapse">
+                <ul class="list-group">
+                  <div ng-repeat = "appli in tbApplication | orderBy">
+                    <input type="checkbox" ng-model="filter['Application'][appli]" ng-model="appli"> {{appli}}
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <hr>
+            <div ng-init="filter['Finish']={}">
+              <div class="row">
+                <div class="col-sm-9">
+                  Finish
+                </div>
+                <div class="col-sm-3">
+                  <a class="btn" data-bs-toggle="collapse" href="#showHideFinish" role="button">
+                    +
+                  </a>
+                </div>
+              </div>
+              <div id="showHideFinish" class="panel-collapse collapse">
+                <ul class="list-group">
+                  <div ng-repeat = "finish in tbFinish | orderBy">
+                    <input type="checkbox" ng-model="filter['Finish'][finish]" ng-model="finish"> {{finish}}
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <hr>
+            <div ng-init="filter['Design']={}">
+              <div class="row">
+                <div class="col-sm-9">
+                  Design Variation
+                </div>
+                <div class="col-sm-3">
+                  <a class="btn" data-bs-toggle="collapse" href="#showHideDesign" role="button">
+                    +
+                  </a>
+              </div>
+              </div>
+              <div id="showHideDesign" class="panel-collapse collapse">
+                <ul class="list-group">
+                  <div ng-repeat = "design in tbDesign | orderBy">
+                    <input type="checkbox" ng-model="filter['Design'][design]" ng-model="design"> {{design}}
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <hr>
+            <div ng-init="filter['Size']={}">
+              <div class="row">
+                <div class="col-sm-9">
+                  Size
+                </div>
+                <div class="col-sm-3">
+                  <a class="btn" data-bs-toggle="collapse" href="#showHideSize" role="button">
+                    +
+                  </a>
+              </div>
+              </div>
+              <div id="showHideSize" class="panel-collapse collapse">
+                <ul class="list-group">
+                  <div ng-repeat = "size in tbSize | orderBy">
+                    <input type="checkbox" ng-model="filter['Size'][size]" ng-model="size"> {{size}}
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <hr>
+            </div>
+              </section>
+        
+      </div>
+      <div class="col-sm-9">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="card h-100" ng-repeat="f in filtered = (list|filter:filterByPropertiesMatchingAND | filter: searchText)">
+              <a href="#!/details/{{f.Id}}"> <img src="image/products/{{f.Id.slice(0,4)}}{{f.Name}}.jpg" class="card-img-top" alt="..."></a>
+                <div class="card-body ">
+                  <h5 class="card-title">{{f.Name}} </h5>
+                  <p class="card-text">{{f.Size}}</p>
+                  <p class="card-text">$ {{f.Price}} /&#13217</p>
+                </div>
+                <div class="card-footer ">
+                  <small class="text-muted">
+                    <button class="btn-card">Compare</button>
+                    <button class="btn-card">Feature</button>
+                    <a href="/documents/1.a.01.pdf" download ="document" target="_blank"><button>Download</button></a>
+                  </small>
+                </div>
+              </div>
+      
+        </div>  
+      </div>
+    </div>
+  </div>
 </div>
