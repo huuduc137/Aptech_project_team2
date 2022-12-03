@@ -67,8 +67,8 @@
         <li class="nav-item col-2 btn btn-lg m-0 p-0">
           <a href="#!expert" class="nav-link">Expert Corner</a>
           <ul class="dropdown-menu w-100">
-            <li><a href=""class="dropdown-item">Blogs</a></li>
-            <li><a href=""class="dropdown-item">Tiles Guide</a></li>
+            <li><a href="#!/expert/blog"class="dropdown-item">Blogs</a></li>
+            <li><a href="#!/expert/guide"class="dropdown-item">Tiles Guide</a></li>
             <li><a href=""class="dropdown-item">Educational Videos</a></li>
             <li><a href=""class="dropdown-item">Tiles Calculation</a></li>
           </ul>
@@ -235,6 +235,12 @@
             })
             .when("/expert",{
                 templateUrl:"section-expertcorner.html"
+            })
+            .when("/expert/blog",{
+                templateUrl:"expertcorner/blog.html"
+            })
+            .when("/expert/guide",{
+                templateUrl:"expertcorner/guide.html"
             })
             .when("/search",{
                 templateUrl:"search.html"
